@@ -1,0 +1,35 @@
+{
+	"build_systems":
+	[
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"python\" -u \"$file\"",
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "/home/kruvv/mypython/store",
+		}
+	],
+	"debugger_configurations":
+	[
+		{
+			"name": "Python: Current File",
+			"type": "python",
+			"request": "launch",
+			"program": "${file}"
+		},
+		{
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": ["runserver"],
+            "django": true,
+            "justMyCode": true
+        },
+	],
+}
